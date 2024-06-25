@@ -9,12 +9,12 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$num.wav'));
   }
 
-  Expanded buildKey({Color color, int soundNo}) {
+  Expanded buildKey({Color? color, required int soundNo}) {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           // backgroundColor: MaterialStateProperty.all<Color>(color)),
-          primary: color,
+          backgroundColor: color,
         ),
         onPressed: () {
           playSound(soundNo);
